@@ -161,6 +161,8 @@ class ParsedText extends StatelessWidget {
               style: mapping.style != null ? mapping.style : style,
               recognizer: recognizer,
             );
+          } else if (mapping.renderTextSpan != null) {
+            widget = mapping.renderTextSpan!(str: matchText, pattern: pattern);
           } else if (mapping.renderWidget != null) {
             Widget child = mapping.renderWidget!(text: matchText, pattern: mapping.pattern!);
 

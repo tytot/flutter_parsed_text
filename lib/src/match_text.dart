@@ -32,6 +32,11 @@ class MatchText {
     required String pattern,
   })? renderText;
 
+  TextSpan Function({
+    required String str,
+    required String pattern,
+  })? renderTextSpan;
+
   /// A callback function that takes the [text] the matches the [pattern] and returns
   /// the [Widget] to be displayed inside a [WidgetSpan]
   Widget Function({
@@ -46,6 +51,7 @@ class MatchText {
     this.style,
     this.onTap,
     this.renderText,
+    this.renderTextSpan,
     this.renderWidget,
   });
 }
